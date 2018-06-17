@@ -1,10 +1,16 @@
 {
-  "name": "seti-ui",
+  "name": "seti-black-ui",
   "theme": "ui",
-  "version": "1.10.0",
-  "description": "A dark colored UI theme for Atom with custom file icons.",
+  "version": "0.0.0",
+  "description": "A black UI Theme forked from seti-ui",
   "license": "MIT",
-  "repository": "https://github.com/jesseweed/seti-ui",
+  "repository": "https://github.com/blue-9/seti-black-ui",
+  "Keywords": [
+    "ui",
+    "theme",
+    "dark",
+    "black"
+  ],
   "engines": {
     "atom": ">1.13.0"
   },

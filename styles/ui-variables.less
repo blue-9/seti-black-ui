@@ -4,7 +4,7 @@
 // - - - - - - - - - - - - - - - - - - - - - - - -
 // - - - - - - - - - - - - - - - - - - - - - - - -
 
-@import "default-theme"; // SET DEFAULT THEME COLORS IN CASE USER HASN'T SET THEM.
+@import "default-theme"; // SET DEFAULT THEME COLORS IN CASE USE HASN'T SET THEM.
 @import "user-theme"; // OVERRIDE DEFAULT COLORS WITH USER THEME
 
 // BASE COLORS
@@ -19,10 +19,12 @@
 @blue: #519aba;
 @blue-highlight: #1d5b91;
 @blue-text: #ffffff;
+@blue-secondary: @purple;
 
 @green: #8dc149;
 @green-highlight: #436b24;
 @green-text: #ffffff;
+@blue-secondary: @purple;
 
 @orange: #e37933;
 @orange-highlight: #b55421;
@@ -63,7 +65,7 @@
 @tree-view-text-color: @white;
 
 // TAB
-@top-bar: 60px;
+@top-bar: 30px;
 @top-bar-small: 40px;
 @tab-bar-background-color: lighten(@black, 3%);
 @tab-bar-border-color: @base-border-color;
@@ -156,10 +158,13 @@
 
 // MISC
 @seti-font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-@font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 @font-size: 12px;
 @disclosure-arrow-size: 12px;
 
 // SCROLLBARS
 @scrollbar-background-color: rgba(42, 42, 42, 0.5);
 @scrollbar-color: rgba(92, 92, 92, 0.5);
+
+//myself
+@all-background: #090908;
+@all-text-color: #e2e0e3;
