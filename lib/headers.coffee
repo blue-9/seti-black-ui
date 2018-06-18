@@ -34,7 +34,7 @@ atom.packages.activatePackage('tree-view').then (tree) ->
     projectRoots = treeView.roots
     updateTreeViewHeaderPosition()
 
-  atom.config.onDidChange 'seti-ui', ->
+  atom.config.onDidChange 'seti-black-ui', ->
     # TODO something other than setTimeout? it's a hack to trigger the update
     # after the CSS changes have occurred. a gamble, probably inaccurate
     setTimeout -> updateTreeViewHeaderPosition()

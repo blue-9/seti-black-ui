@@ -8,28 +8,28 @@ module.exports =
     self = @
 
     # TAB SIZE
-    self.tabSize atom.config.get('seti-ui.compactView')
+    self.tabSize atom.config.get('seti-black-ui.compactView')
     # TITLE BAR
-    self.hideTitleBar atom.config.get('seti-ui.hideTitleBar')
+    self.hideTitleBar atom.config.get('seti-black-ui.hideTitleBar')
     # SHOW DOCUMENT TITLE
-    self.hideDocumentTitle atom.config.get('seti-ui.hideDocumentTitle')
+    self.hideDocumentTitle atom.config.get('seti-black-ui.hideDocumentTitle')
     # PROJECT TAB
-    self.hideProjectTab atom.config.get('seti-ui.hideProjectTab')
+    self.hideProjectTab atom.config.get('seti-black-ui.hideProjectTab')
     # DISPLAY IGNORED FILES
-    self.ignoredFiles atom.config.get('seti-ui.displayIgnored')
+    self.ignoredFiles atom.config.get('seti-black-ui.displayIgnored')
     # DISPLAY FILE ICONS
-    self.fileIcons atom.config.get('seti-ui.fileIcons')
+    self.fileIcons atom.config.get('seti-black-ui.fileIcons')
     # HIDE TABS
-    self.hideTabs atom.config.get('seti-ui.hideTabs')
+    self.hideTabs atom.config.get('seti-black-ui.hideTabs')
     # SET THEME
-    self.setTheme atom.config.get('seti-ui.themeColor'), false, false
+    self.setTheme atom.config.get('seti-black-ui.themeColor'), false, false
     # ANIMATIONS
-    self.animate atom.config.get('seti-ui.disableAnimations')
+    self.animate atom.config.get('seti-black-ui.disableAnimations')
 
-    atom.config.onDidChange 'seti-ui.themeColor', (value) ->
+    atom.config.onDidChange 'seti-black-ui.themeColor', (value) ->
       self.setTheme value.newValue, value.oldValue, true
 
-  package: atom.packages.getLoadedPackage('seti-ui'),
+  package: atom.packages.getLoadedPackage('seti-black-ui'),
 
   # RELOAD WHEN SETTINGS CHANGE
   refresh: ->
@@ -46,7 +46,7 @@ module.exports =
     path = require('path')
 
     # GET OUR PACKAGE INFO
-    pkg = atom.packages.getLoadedPackage('seti-ui')
+    pkg = atom.packages.getLoadedPackage('seti-black-ui')
 
     # THEME DATA
     themeData = '@seti-primary: @' + theme.toLowerCase() + ';'
@@ -54,7 +54,7 @@ module.exports =
     themeData = themeData + '@seti-primary-highlight: @' + theme.toLowerCase() + '-highlight;'
 
     # SAVE TO ATOM CONFIG
-    atom.config.set 'seti-ui.themeColor', theme
+    atom.config.set 'seti-black-ui.themeColor', theme
 
     # SAVE USER THEME FILE
     fs.writeFile pkg.path + '/styles/user-theme.less', themeData, (err) ->
@@ -69,7 +69,7 @@ module.exports =
   animate: (val) ->
     Utility.applySetting
       action: 'addWhenFalse'
-      config: 'seti-ui.disableAnimations'
+      config: 'seti-black-ui.disableAnimations'
       el: [
         'atom-workspace'
       ]
@@ -81,7 +81,7 @@ module.exports =
   tabSize: (val) ->
     Utility.applySetting
       action: 'addWhenTrue'
-      config: 'seti-ui.compactView'
+      config: 'seti-black-ui.compactView'
       el: [
         'atom-workspace'
       ]
@@ -93,7 +93,7 @@ module.exports =
   hideTitleBar: (val) ->
     Utility.applySetting
       action: 'addWhenTrue'
-      config: 'seti-ui.hideTitleBar'
+      config: 'seti-black-ui.hideTitleBar'
       el: [
         'atom-workspace'
       ]
@@ -105,7 +105,7 @@ module.exports =
   hideDocumentTitle: (val) ->
     Utility.applySetting
       action: 'addWhenTrue'
-      config: 'seti-ui.hideDocumentTitle'
+      config: 'seti-black-ui.hideDocumentTitle'
       el: [
         'atom-workspace'
       ]
@@ -117,7 +117,7 @@ module.exports =
   hideProjectTab: (val) ->
     Utility.applySetting
       action: 'addWhenTrue'
-      config: 'seti-ui.hideProjectTab'
+      config: 'seti-black-ui.hideProjectTab'
       el: [
         'atom-workspace'
       ]
@@ -130,7 +130,7 @@ module.exports =
   hideTabs: (val) ->
     Utility.applySetting
       action: 'addWhenTrue'
-      config: 'seti-ui.hideTabs'
+      config: 'seti-black-ui.hideTabs'
       el: [
         'atom-workspace'
       ]
@@ -143,7 +143,7 @@ module.exports =
   fileIcons: (val) ->
     Utility.applySetting
       action: 'addWhenTrue'
-      config: 'seti-ui.fileIcons'
+      config: 'seti-black-ui.fileIcons'
       el: [ 'atom-workspace' ]
       className: 'seti-icons'
       val: val
@@ -154,7 +154,7 @@ module.exports =
   ignoredFiles: (val) ->
     Utility.applySetting
       action: 'addWhenFalse'
-      config: 'seti-ui.displayIgnored'
+      config: 'seti-black-ui.displayIgnored'
       el: [
         '.file.entry.list-item.status-ignored'
         '.directory.entry.list-nested-item.status-ignored'
